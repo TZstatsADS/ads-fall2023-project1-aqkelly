@@ -1,0 +1,32 @@
+---
+title: "Unraveling the Secrets of Happyness"
+output:
+  html_document:
+    df_print: paged
+---
+
+*People earn happyness for different reasons, but could there be a common sources of happyness? To understand the secrets behind, this blog takes a corpus of 100,000+ crowd-sourced happy moments to analyse the causes of happyness.*
+
+1. description of the data
+2. Analysis
+3. Conclusion
+
+## Description of the data
+
+HappyDB is a corpus of 100,000+ crowd-sourced happy moments. The data is collected from Amazon Mechanical Turk (MTurk.) over 3 months.
+
+Here are the instructions of the data collection task.
+
+```
+What made you happy today?  Reflect on the past {24 hours|3 months}, and recall three actual events 
+that happened to you that made you happy.  Write down your happy moment in a complete sentence.
+Write three such moments.
+
+Examples of happy moments we are NOT looking for (e.g events in distant past, partial sentence):
+    - The day I married my spouse
+    - My Dog
+```
+*(cite from https://github.com/megagonlabs/HappyDB)*
+
+## Analysis
+
