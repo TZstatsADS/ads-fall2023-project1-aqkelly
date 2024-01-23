@@ -30,3 +30,34 @@ Examples of happy moments we are NOT looking for (e.g events in distant past, pa
 
 ## Analysis
 
+The following is a image showing the 50 most common words in the 100,000 happy moments and the frequency of the 10 most common words.
+
+```{r echo=FALSE, fig.show='hold', out.height="50%", out.width="50%"}
+knitr::include_graphics("/Users/jiaqi/Documents/GitHub/output/common_words.jpg")
+knitr::include_graphics("/Users/jiaqi/Documents/GitHub/output/frequency.jpg")
+```
+
+From the picture, we notices that most people, with more than 10,000, earn happyness through their friends. Other words such as family, game, daughter, son are also quite common in reasons.
+
+```{r echo=FALSE, fig.show='hold', out.height="50%", out.width="50%"}
+knitr::include_graphics("/Users/jiaqi/Documents/GitHub/output/gender.jpg")
+knitr::include_graphics("/Users/jiaqi/Documents/GitHub/output/Parenthood.jpg")
+```
+
+If we check the difference reasons of being happyness from different gender and parenthood, we notice that for girls, the words husband and boyfriend appear much more frequently than that for boys; while for boys it is the words wife and girlfriend that come into place. 
+
+
+Similarly, the words daughter, son and kids local way above the $45^\circ$ line for parents. This means that as compare with non-parents, parents tend to have extra reasons of being happy: their children.
+
+```{r echo=FALSE, fig.show='hold', out.height="50%", out.width="50%"}
+knitr::include_graphics("/Users/jiaqi/Documents/GitHub/output/married.jpg")
+knitr::include_graphics("/Users/jiaqi/Documents/GitHub/output/reflection_period.jpg")
+```
+
+Also, for married person, the percentage of mentioning wife or husband or kid is much higher than single, vice verse. This is reasonable seems only those who married has a wife or a husband, and hence the reason they mention them is much higher than single person.
+
+Different reflection period, however, do not have a outstanding word that is very far from the $45^\circ$ line near 1%. This means that the reasons of making people happy did not change a lot between the past three months and the past 24 hours.
+
+## Conclusion
+
+The reasons of happyness could be different for different groups of people. However, there is still many common reasons for making everybody happy, such as friends. To further understand the reasons, more study may need to generate a cleaner idea.
