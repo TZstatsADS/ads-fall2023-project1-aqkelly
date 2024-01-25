@@ -178,6 +178,30 @@ title("Age group above 50", line = 1)
 
 The two words clouds above clearly shows the differences between the two age groups. For people with age below 50, most of the happiness come from their friend, while for people above 50, family words (including words daughter, husband, son, wife, home) appear way more common.
 
+```{r,warning=FALSE, message=FALSE,echo=FALSE}
+plot_above50 = word_count_above50[1:15,] %>%
+  mutate(word = reorder(word, n)) %>%
+  ggplot(aes(word, n)) +
+  geom_col() +
+  labs(title = "Word Frequency for Age Above 50")+
+  xlab(NULL) +
+  ylab("Word Frequency")+
+  coord_flip()
+
+plot_below50 = word_count_below50[1:15,] %>%
+  mutate(word = reorder(word, n)) %>%
+  ggplot(aes(word, n)) +
+  geom_col() +
+  labs(title = "Word Frequency for Age Below 50")+
+  xlab(NULL) +
+  ylab("Word Frequency")+
+  coord_flip()
+
+grid.arrange(plot_below50, plot_above50, ncol = 2)
+``` 
+
+If we look at the frequency plots of the 15 most common words for two age groups, we can clearly see that the proportion of family words become larger for people above 50. Also, young people tend to earn more happiness from game or job than the old.
+
 #### Will different gender play a different roles? Let's see.
 
 ```{r,message=FALSE,warning=FALSE,echo=FALSE}
@@ -255,8 +279,58 @@ title("Age group above 50 for male", line = 1)
 
 For female, the situation is similar with the population. However, for male, the word "wife" overtake the role of "friend".
 
+```{r,warning=FALSE, message=FALSE,echo=FALSE}
+plot_above50_f = word_count_above50_f[1:15,] %>%
+  mutate(word = reorder(word, n)) %>%
+  ggplot(aes(word, n)) +
+  geom_col() +
+  labs(title = "Age Above 50 for Female")+
+  xlab(NULL) +
+  ylab("Word Frequency")+
+  coord_flip()
+
+plot_below50_f = word_count_below50_f[1:15,] %>%
+  mutate(word = reorder(word, n)) %>%
+  ggplot(aes(word, n)) +
+  geom_col() +
+  labs(title = "Age Below 50 for Female")+
+  xlab(NULL) +
+  ylab("Word Frequency")+
+  coord_flip()
+
+grid.arrange(plot_below50_f, plot_above50_f, ncol = 2)
+``` 
+
+We can see that overall the main sources of happiness for female do not change a lot as age increase. Both friends and family place an important roles in generating happiness, with the proportion of family become larger for those above 50.
+
+```{r,warning=FALSE, message=FALSE,echo=FALSE}
+plot_above50_m = word_count_above50_m[1:15,] %>%
+  mutate(word = reorder(word, n)) %>%
+  ggplot(aes(word, n)) +
+  geom_col() +
+  labs(title = "Age Above 50 for Male")+
+  xlab(NULL) +
+  ylab("Word Frequency")+
+  coord_flip()
+
+plot_below50_m = word_count_below50_m[1:15,] %>%
+  mutate(word = reorder(word, n)) %>%
+  ggplot(aes(word, n)) +
+  geom_col() +
+  labs(title = "Age Below 50 for Male")+
+  xlab(NULL) +
+  ylab("Word Frequency")+
+  coord_flip()
+
+grid.arrange(plot_below50_m, plot_above50_m, ncol = 2)
+``` 
+
+However, for male, "wife" takes over the place of "friend" and becomes the most frequent word for those above 50, while for those below 50, the frequency of "wife" is less than the half of the word "friend".
+
 ## Conclusion
 
-Family seems to be the most common source of happiness for people over 50. Also, for female, children and husband has the similar frequency in mentioning, while for husband, they mention wife the most frequent. However, apart from the difference in the role of family, there is not significant differences bewteen the source of happiness of these two age groups.
+Family and friend seems to be the most common source of happiness for people over 50, while for those below 50 friend is the most important source. Game and job are also the frequent words mention by the young but not the old. 
+
+For female, the word frequency does not change a lot from age below 50 to age above 50. However, for male, wife becomes the most frequent word after their 50s. Though the differences, both gender put more attention on family after 50s.
 
 Limitation: The original data has age range from 2 to 233. This is clearly an error but there is not clear instruction. Hence, I consider age group from 17 to 80 only, but there could still be some error in the age.
